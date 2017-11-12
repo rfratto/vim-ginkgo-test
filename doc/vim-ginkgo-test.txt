@@ -1,0 +1,71 @@
+*vim-ginkgo-test.txt* Go Ginkgo Testing Runner 
+*vim-ginkgo-test* 
+
+                                Vim Ginkgo Test 
+
+==============================================================================
+CONTENTS                                                *ginkgo-test-contents*
+
+  1. Intro..................................|ginkgo-test-intro|
+	2. Install................................|ginkgo-test-install|
+	3. Commands...............................|ginkgo-test-commands|
+	4. Mappings...............................|ginkgo-test-mappings|
+	5. Credits................................|ginkgo-test-credits|
+
+==============================================================================
+INTRO                                                      *ginkgo-test-intro*
+
+vim-ginkgo-test provides Ginkgo test result parsing on top of of the vim-go
+plugin. vim-go must be installed for this plugin to work properly.
+
+	* Test your Ginkgo test suites in the current working directory by calling
+	|:GinkgoTest|
+
+==============================================================================
+INSTALL                                                  *ginkgo-test-install*
+
+Use your favorite vim package manager and install rfratto/vim-ginkgo-test.
+
+==============================================================================
+COMMANDS                                                *ginkgo-test-commands*
+
+:GinkgoTest[!] [expand]                                          *:GinkgoTest*
+
+    Run the Ginkgo test suite using your current directory. Errors are
+		populated in the quickfix window. If an argument is passed, [expand] is
+		used as the file selector. 
+
+		You may optionally pass any valid Ginkgo flags/options. For a full list,
+		please see `ginkgo -h`. 
+
+		GinkgoTest times out automatically after 10 seconds. To customize the
+		timout use |'g:go_test_timeout'|. This feature is disabled if any
+		arguments are passed to the `:GinkgoTest` command, and must be passed via
+		`-timeout` in that case.
+
+		If [!] is not given, the first error is jumped to.
+
+		If using neovim, `:GoTest` will run in a new terminal or run
+		asynchronously in the background according go |'g:go_term_enabled'|. You
+		can set the mode of the terminal with |'g:go_term_mode'|.
+
+==============================================================================
+MAPPINGS                                                *ginkgo-test-mappings*
+
+Like vim-go, vim-ginkgo-test provides <Plug> keys which can be used to create
+custom mappings. For example, to create a mapping that calls `ginkgo` for the
+current package, create a mapping for `(ginkgo-test)`: >
+
+    au FileType go nmap <leader>r <Plug>(ginkgo-test)
+
+Available <Plug> keys:
+
+                                                               *(ginkgo-test)*
+Calls `ginkgo` for the current package 
+
+==============================================================================
+CREDITS                                                  *ginkgo-test-credits*
+
+Thanks to the vim-go authors and contributors for the original plugin for the 
+inspiration.
+
