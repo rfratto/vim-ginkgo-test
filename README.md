@@ -1,7 +1,7 @@
 # vim-ginkgo-test 
 
 This plugin extends the excellent [vim-go](https://github.com/fatih/vim-go)
-plugin by adding a :GinkgoTest command. 
+plugin by adding a `:GinkgoTest` command. 
 
 ## Dependencies
 
@@ -17,7 +17,8 @@ repository.
 ## Usage
 
 The full documentation can be found at [doc/vim-ginkgo-test.txt](doc/vim-ginkgo-test.txt). You can
-display it from within Vim with `:help vim-ginkgo-test`.
+display it from within Vim with `:help vim-ginkgo-test`. Otherwise, just load up
+a `.go` file and run `:GinkgoTest`. 
 
 ## License 
 
