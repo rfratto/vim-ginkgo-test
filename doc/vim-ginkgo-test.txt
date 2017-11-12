@@ -18,7 +18,7 @@ INTRO                                                      *ginkgo-test-intro*
 vim-ginkgo-test provides Ginkgo test result parsing on top of of the vim-go
 plugin. vim-go must be installed for this plugin to work properly.
 
-	* Test your Ginkgo test suites in the current working directory by calling
+  * Test your Ginkgo test suites in the current working directory by calling
     |:GinkgoTest|
 
 ==============================================================================
